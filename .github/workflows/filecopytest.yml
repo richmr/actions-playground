@@ -30,6 +30,6 @@ jobs:
           # Source file
           source: guessing_game/.pages/TooLow.md
           # Target file
-          target: guessing_game/.pages/readme.md
+          target: guessing_game/readme.md
 
       - uses: stefanzweifel/git-auto-commit-action@v5
