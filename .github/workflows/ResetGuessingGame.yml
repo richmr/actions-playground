@@ -33,7 +33,7 @@ jobs:
       - name: Delete last guess
         uses: JesseTG/rm@v1.0.3
         with:
-          path: /guessing_game/myguess.txt
+          path: guessing_game/myguess.yml
 
       - name: Pick next target
         id: target-pick
