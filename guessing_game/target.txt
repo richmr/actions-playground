@@ -1,1 +1,1 @@
-$THE_SECRET
+env.THE_SECRET
