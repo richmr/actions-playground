@@ -1,1 +1,1 @@
-env.THE_SECRET
+1
