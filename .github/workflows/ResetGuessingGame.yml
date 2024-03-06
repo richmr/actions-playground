@@ -30,14 +30,9 @@ jobs:
           # Target file
           target: guessing_game/readme.md
 
-      - name: Delete last guess
-        uses: JesseTG/rm@v1.0.3
-        with:
-          path: guessing_game/myguess.yml
-
       - name: Pick next target
         id: target-pick
-        run: echo TARGET=$((1 + RANDOM % 100)) >> "$GITHUB_OUTPUT"
+        run: echo TARGET=$((1 + RANDOM % 10)) >> "$GITHUB_OUTPUT"
 
       - name: Set the target secret
         env:
