@@ -1,1 +1,1 @@
-# Your guess was too low!
+# Your guess was too high!
