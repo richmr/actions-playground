@@ -60,5 +60,6 @@ jobs:
           source: guessing_game/.pages/GoodGuess.md
           # Target file
           target: guessing_game/readme.md
-        
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
       
