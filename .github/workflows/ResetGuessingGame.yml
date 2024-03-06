@@ -32,7 +32,7 @@ jobs:
 
       - name: Pick next target
         id: target-pick
-        run: echo TARGET=$((1 + RANDOM % 10)) >> "$GITHUB_OUTPUT"
+        run: echo TARGET=$((1 + RANDOM % 100)) >> "$GITHUB_OUTPUT"
 
       - name: Set the target secret
         env:
