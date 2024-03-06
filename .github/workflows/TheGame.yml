@@ -24,6 +24,9 @@ jobs:
       
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+    
       - name: Run read-yaml action
         id: yaml-data
         uses: jbutcher5/read-yaml@main      # You may wish to replace main with a version tag such as '1.6' etc.
@@ -40,16 +43,22 @@ jobs:
           # Target file
           target: guessing_game/readme.md
 
+      - name: Is It High
+        if: steps.yaml-data.outputs.data > env.CURRENT_TARGET
+        uses: canastro/copy-action@0.0.2
+        with:
+          # Source file
+          source: guessing_game/.pages/TooHigh.md
+          # Target file
+          target: guessing_game/readme.md
+
+      - name: Just Right
+        if: steps.yaml-data.outputs.data == env.CURRENT_TARGET
+        uses: canastro/copy-action@0.0.2
+        with:
+          # Source file
+          source: guessing_game/.pages/GoodGuess.md
+          # Target file
+          target: guessing_game/readme.md
         
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      
