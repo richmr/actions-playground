@@ -1,5 +1,5 @@
-# You got it!  
+# Welcome to the Guessing Game
 
-Here is your prize!
+Make a file called `myguess.txt` in this directory with a single line like `guess: [your guess of a number 1-100.]`  Then commit the changes to the `main` branch and this readme will be replaced with the next hint or your prize.
 
-![billion](https://i.pinimg.com/736x/78/be/8c/78be8cca90b09252472344d602497d20.jpg)
+## Good Luck!
